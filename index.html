@@ -11,47 +11,46 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | Product preview card component</title>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
 
-    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Product preview card component</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card-wrapper">
-      <div class="perfume-image">
-        <img src="./images/image-product-desktop.jpg" alt="" />
-      </div>
-      <div class="card-description">
-        <h1><span class="perfume">Perfume</span><br />Gabrielle Essence Eau De Parfum</h1>
-        <p>
+    
+    <div class="product-card">
+      <figure class="mobile-img wrapper">
+        <img
+          src="./images/image-product-mobile.jpg"
+          alt="Mobile version of a product image"
+          style="width: 100%; max-width: 686px; height: 100%; max-height: 480px;"
+        />
+      </figure>
+
+      <div class="card-body">
+        <h1>Perfume</h1>
+        
+        <h2>Gabrielle Essence Eau De Parfum</h2>
+
+        <p class="floral-para">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <div class="price-tag"><p><span id="price">$149.99</span></p>
-          <div class="reduce-price-tag"><s>$169.99</s></div>
-        </div>
-        <div class="cart-botton">
-          <button class="cart-button">
-            <img src="./images/icon-cart.svg" alt="Cart icon">
-            Add to Cart
-          </button>
-        </div>
+
+       <div class="product-price-wrapper">
+         <div class="product-price">
+          <p class="price-tag">$149.99</p>
+          <s class="reduced-price">$169.99</s>
+         </div>
+        <button class="add-to-cart-btn"><img src="./images/icon-cart.svg" alt="">Add to Cart</button>
+       </div>
       </div>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->
     </div>
   </body>
 </html>
