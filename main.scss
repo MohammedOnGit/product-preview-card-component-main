@@ -23,20 +23,13 @@
   src: url("./fonts/fraunces-v31-latin-700.woff2") format("woff2");
 }
 
-// - Dark cyan: hsl(158, 36%, 37%)
-// - Cream: hsl(30, 38%, 92%)
 
-// ### Neutral
-
-// - Very dark blue: hsl(212, 21%, 14%)
-// - Dark grayish blue: hsl(228, 12%, 48%)
-// - White: hsl(0, 0%, 100%)
 
 //COLOUR VARIABLES
 $Very-dark-blue: hsl(212, 21%, 14%);
 $Cream: hsl(30, 38%, 92%);
 
-$Dark-cyan: hsl(158, 36%, 37%); 
+$Dark-cyan: hsl(158, 36%, 37%);
 
 $Very-dark-blue: hsl(212, 21%, 14%);
 $Dark-grayish-blue: hsl(228, 12%, 48%);
@@ -45,13 +38,11 @@ $White: hsl(0, 0%, 100%);
 //FONTS VARIABLES
 $fs-body-paragraph: 0.875em;
 
-@import '/node_modules/scss-reset/dist/main.css';
+@import "/node_modules/scss-reset/dist/main.css";
 
-body{
+body {
   background-color: $Cream;
   color: $Dark-grayish-blue;
-  
-
 }
 
 .mobile-img {
@@ -65,11 +56,11 @@ body{
   border-top-right-radius: 0.75em;
   margin-inline: auto;
   margin-block: 1.75em;
-  overflow: hidden; 
+  overflow: hidden;
   margin-bottom: 1.3em;
 }
 
-.product-card{
+.product-card {
   background-color: $White;
   width: 21.4em;
   margin-inline: auto;
@@ -77,19 +68,18 @@ body{
   border-top-right-radius: 0.75em;
   border-bottom-right-radius: 0.75em;
   border-bottom-left-radius: 0.75em;
- height: 611px;
+  height: 80%;
 }
 
-
-h1{
+h1 {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 0.9em;
   text-transform: uppercase;
-  letter-spacing: .21em;
+  letter-spacing: 0.21em;
   padding-top: 1px;
 }
- h2{
+h2 {
   font-family: "Fraunces";
   color: $Very-dark-blue;
   font-weight: 700;
@@ -97,53 +87,53 @@ h1{
   margin-block: 0.28em;
   line-height: 30px;
   letter-spacing: -0.2px;
-
- }
-
-.card-body{
-  padding-inline: 1.5em;
 }
 
+.card-body {
+  padding-inline: 1.5em;
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  
+ 
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  
 }
 
-.product-price{
+.product-price {
   display: flex;
 
   // background-color: $Dark-cyan;
+}
 
-} 
-
-.price-tag{
+.price-tag {
   font-family: "Fraunces";
   font-weight: 700;
   font-size: 2em;
   color: $Dark-cyan;
 }
-.floral-para{
+.floral-para {
   margin-block: 16px;
   font-family: "Montserrat";
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
 }
 
-.product-price-wrapper{
-  margin-block: 1.6em;
+.product-price-wrapper {
+  margin-block: 2.2em;
 }
 
-.reduced-price{
+.reduced-price {
   font-family: "Montserrat";
   margin-left: 1.3em;
   font-size: 13px;
 }
 
-.add-to-cart-btn{
+.add-to-cart-btn {
   background-color: $Dark-cyan;
   display: block;
   padding: 1em;
@@ -159,5 +149,63 @@ h1{
   font-size: 14px;
   letter-spacing: 0.65px;
   font-weight: 600;
+  cursor: pointer;
+}
 
+.add-to-cart-btn:hover{
+  background-color: $Very-dark-blue;
+}
+
+.desktop-img-wrapper {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .desktop-img-wrapper {
+    display: block;
+    width: 100%;
+     
+  }
+
+  img{
+    border-bottom-left-radius: 0.75em;
+    border-top-left-radius: 0.75em;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+  .product-card {
+    display: grid;
+    width: 37.7em;
+    // height: 74.5%;
+    height: 66.5%;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
+  .card-body {
+    padding-inline: 2em;
+    padding-block: 1.9em;
+    padding-top: 1.2em;
+  }
+  h1 {
+    margin-block: 0.55em;
+  }
+
+  h2 {
+    margin-block: 0.64em;
+  }
+  .floral-para {
+    margin-block: 2em;
+    margin-top: 2.08em;
+  }
+  .add-to-cart-btn {
+    margin-block: 2.257em;
+  }
 }

@@ -1,5 +1,5 @@
 /* montserrat-500 - latin */
-@import '/node_modules/scss-reset/dist/main.css';
+@import "/node_modules/scss-reset/dist/main.css";
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
@@ -51,7 +51,7 @@ body {
   border-top-right-radius: 0.75em;
   border-bottom-right-radius: 0.75em;
   border-bottom-left-radius: 0.75em;
-  height: 611px;
+  height: 80%;
 }
 
 h1 {
@@ -101,11 +101,11 @@ h2 {
   margin-block: 16px;
   font-family: "Montserrat";
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 .product-price-wrapper {
-  margin-block: 1.6em;
+  margin-block: 2.2em;
 }
 
 .reduced-price {
@@ -130,4 +130,57 @@ h2 {
   font-size: 14px;
   letter-spacing: 0.65px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+.desktop-img-wrapper {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .desktop-img-wrapper {
+    display: block;
+    width: 100%;
+  }
+  img {
+    border-bottom-left-radius: 0.75em;
+    border-top-left-radius: 0.75em;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .product-card {
+    display: grid;
+    width: 37.7em;
+    height: 66.5%;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  .card-body {
+    padding-inline: 2em;
+    padding-block: 1.9em;
+    padding-top: 1.2em;
+  }
+  h1 {
+    margin-block: 0.55em;
+  }
+  h2 {
+    margin-block: 0.64em;
+  }
+  .floral-para {
+    margin-block: 2em;
+    margin-top: 2.08em;
+  }
+  .add-to-cart-btn {
+    margin-block: 2.257em;
+  }
 }
